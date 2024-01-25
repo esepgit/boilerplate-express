@@ -17,7 +17,7 @@ app.get('/json', function(req, res) {
     note.message = note.message.toUpperCase();
   }
 
-  rs.json(note);
+  res.json(note);
 });
 
 
