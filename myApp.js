@@ -56,6 +56,12 @@ app.route('/name')
     const lastName = req.query.last;
 
     res.json({ name: `${firstName} ${lastName}` });
+  }) //manejador del formulario utilizando body-parser para leer datos post
+  .post(function(req, res) {
+    const firstName = req.body.first;
+    const lastName = req.body.last;
+
+    res.json({name: `${firstName} ${lastName}`})
   })
 
 
