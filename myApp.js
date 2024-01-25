@@ -2,7 +2,7 @@ let express = require('express');
 let app = express();
 require('dotenv').config();
 
-app.use(function(req, res, next) {
+app.use('/', function(req, res, next) {
   const method = req.method;
   const path = req.path;
   const ip = req.ip;
