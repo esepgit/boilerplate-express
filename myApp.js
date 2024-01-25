@@ -1,6 +1,7 @@
 let express = require('express');
 let app = express();
 require('dotenv').config();
+let bodyParser = require('body-parser');
 
 //middleware
 app.use(function(req, res, next) {
@@ -16,6 +17,9 @@ app.use(function(req, res, next) {
 app.use('/public', express.static(__dirname + '/public'));
 
 console.log("Hello World");
+
+//middleware body-parse
+app.use(bodyParser.urlencoded({extended: false}));
 
 //servidor de archivos html
 app.get('/', function(req, res) {
